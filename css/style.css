@@ -1,0 +1,74 @@
+body {
+    background: rgb(31, 30, 30);
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.content h1 {
+    font-family: 'Fira Code';
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.content p {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+.container {
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.title {
+    padding: 5px;
+    color: aqua;
+    height: auto;
+    font-weight: bold;
+    display: inline-block;
+    font-family: 'Fira Code';
+}
+
+.titleBar {
+    display: grid;
+    color: aliceblue;
+    grid-template-columns: 1fr auto;
+}
+
+.titleBar button {
+    color: aliceblue;
+}
+
+.window-controls button:hover {
+    background: linear-gradient(red, yellow);
+}
+
+button {
+    background: transparent;
+    outline: 0;
+    border: 0;
+    color: brown;
+}
+
+.window-controls {
+    float: right;
+}
+
+.preventSelect {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.draggable {
+    -webkit-app-region: drag;
+}

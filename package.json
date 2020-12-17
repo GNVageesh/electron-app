@@ -1,0 +1,32 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "A Electron Project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . --no-sandbox",
+    "dist": "electron-builder --linux"
+  },
+  "keywords": [
+    "Electron",
+    "Package",
+    "GNVageesh"
+  ],
+  "author": "GN Vageesh <vageeshgn2005@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.1.0",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "com.gnvageesh.electron-app",
+    "linux": {
+      "target": [
+        "deb",
+        "rpm"
+      ],
+      "category": "Utility"
+    }
+  }
+}
