@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron . --no-sandbox",
-    "dist": "electron-builder --linux"
+    "dist": "electron-builder --linux -p always"
   },
   "repository": "https://github.com/GNVageesh/electron-app",
   "keywords": [
@@ -21,13 +21,25 @@
     "electron-builder": "^22.9.1"
   },
   "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "GNVageesh",
+        "repo": "electron-app"
+      }
+    ],
     "appId": "com.gnvageesh.electron-app",
     "linux": {
       "target": [
         "deb",
-        "AppImage"
+        "AppImage",
+        "rpm"
       ],
       "category": "Utility"
     }
+  },
+  "dependencies": {
+    "electron-log": "^4.3.1",
+    "electron-updater": "^4.3.5"
   }
 }
